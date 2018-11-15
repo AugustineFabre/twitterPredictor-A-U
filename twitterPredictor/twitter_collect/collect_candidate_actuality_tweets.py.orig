@@ -17,4 +17,4 @@ def get_tweets_from_candidates_search_queries(queries):
 tweets_0 = get_tweets_from_candidates_search_queries(queries_0)
 tweets_1 = get_tweets_from_candidates_search_queries(queries_1)
 
-# test
+
