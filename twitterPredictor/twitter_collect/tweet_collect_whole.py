@@ -1,25 +1,45 @@
-def get_candidate_queries(num_candidate, file_path):
-    """
-    Generate and return a list of string queries for the search Twitter API from the file file_path_num_candidate.txt
-    :param num_candidate: the number of the candidate
-    :param file_path: the path to the keyword and hashtag
-    files
-    :param type: type of the keyword, either "keywords" or "hashtags"
-    :return: (list) a list of string queries that can be done to the search API independently
-    """
+import os
+print(os.path.abspath(os.curdir))
+
+
+#def get_candidate_queries(num_candidate, file_path):
+
+def get_candidate_queries():
+    final_0 = []
+    final_1 = []
     try:
-        Keywords=open(file_path.keywords_candidate_num_candidate.txt)
-        Hashtag=open(file_path.hastag_candidate_num_candidate.txt)
-        liste=Keywords.spilt("\n")+Hashtag.split("\n") # liste contient les mots clés et les hashtag du candidat demandé
-        return liste
+        with open("../CandidateData/hashtag_candidate_0.txt", "r") as hashtag:
+            for line in hashtag.readlines():
+                line = line.strip('\n')
+                final_0.append(line)
+
+        with open("../CandidateData/keywords_candidate_0.txt", "r") as keywords:
+            for line1 in keywords.readlines():
+                line1 = line1.strip('\n')
+                final_0.append(line1)
+
+        for element in final_0:
+            print(element)
+
+        with open("../CandidateData/hashtag_candidate_1.txt", "r") as hashtag:
+            for line in hashtag.readlines():
+                line = line.strip('\n')
+                final_1.append(line)
+
+        with open("../CandidateData/keywords_candidate_1.txt", "r") as keywords:
+            for line1 in keywords.readlines():
+                line1 = line1.strip('\n')
+                final_1.append(line1)
+
+        for element in final_1:
+            print(element)
+
     except IOError:
-        return " Dossier vide"
+        print('No such file or path')
 
-def pytest():
-    if len(get_candidate_queries(0,candidatedata)==16:
-        return " La fonction est bien executée"
-     else:
-        return "echec"
+    return [final_0,final_1]
 
 
 
+a = get_candidate_queries()
+print (a)
