@@ -1,21 +1,25 @@
 import tweepy
-from codingweeks.tweet_collection.credentials import *
+from codingweeks.tweet_collection2.credentials import *
 
 def twitter_setup():
     """
     Utility function to setup the Twitter's API
     with an access keys provided in a file credentials.py
-    :return: the authentified API
+    return: the authentified API
     """
     from tweepy.api import API
 
     #authentification and access using keys:
-    authentification=tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET )
+    authentification=tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
     authentification.set_access_token(ACCESS_TOKEN,ACCESS_SECRET)
-
     #return API with authentification
     api=tweepy.API(authentification)
     return api
+
+twitter_setup()
+
+
+
 
 def test_twitter_setup():
     api=twitter_setup()
@@ -23,5 +27,7 @@ def test_twitter_setup():
         return "test réussi"
     else:
         return "échec"
+
+
 
 
