@@ -8,7 +8,7 @@ def test_collect():
     assert 'tweet_textual_content' in data.columns
     
 def test_collect2():
-    import twitterPredictor.py import *
+    from twitterPredictor.py import *
     tweets = tweet_collect.collect()
     data =  transform_to_dataframe(tweets)
     assert 'tweet_textual_content' in data.columns
