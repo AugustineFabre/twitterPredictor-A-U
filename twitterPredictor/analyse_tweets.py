@@ -4,24 +4,6 @@ from textblob import Word
 from twitterPredictor.twitter_collect import twitter_connection_setup
 from twitterPredictor.twitter_collect.to_dataframe import *
 
-import nltk
-nltk.download('punkt')
-L=['A','après','avant','avec','chez','concernant','contre','dans','de','depuis','derrière','dès','devant','durant','en','entre','envers','hormis','hors','jusque','malgré','moyennant','nonobstant','outre','par','parmi','pendant','pour','près','sans','sauf','selon','sous','suivant','sur','touchant']
-def recup_mot():
-    data_pd_0,data_pd_1=myfonc()
-    for num in data_pd_0['tweet_textual_content']:
-        tweet=TextBlob(num)
-        if tweet.detect_language()!='fr':
-            tweet=tweet.translate(to='fr')
-        final=tweet.words
-        right=[]
-        for j in final:
-            right.append(j.lemmatize())
-        for i in range(len(right)):
-            if right[i] in L:
-                right.pop(i)
-        print (right)
-#on défini les tweets positifs de Emmanuel Macron et Marine Le Pen
 data_pd_0,data_pd_1=myfonc()
 
 def positivite():
