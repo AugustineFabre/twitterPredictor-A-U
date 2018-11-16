@@ -24,7 +24,7 @@ def recup_mot():
 #on défini les tweets positifs de Emmanuel Macron et Marine Le Pen
 data_pd_0,data_pd_1=myfonc()
 
-def positivite(tweets):
+def positivite():
     tweets=data_pd_0['tweet_textual_content']
     tweets_positif_0=[]
     tweets_negatif_0=[]
