@@ -15,7 +15,7 @@ def positivite():
         tweet=TextBlob(tweet)
         if tweet.sentiment.polarity>0.2: # on détermine les tweets positifs comme ayant une positivité supérieure à 0.2
             tweets_positif_0.append(tweet)
-        if -0.2<tweet.sentiment.polarity<0.2:
+        if -0.2<=tweet.sentiment.polarity<=0.2:
             tweets_neutre_0.append(tweet)
         else:
             tweets_negatif_0.append(tweet)# on détermine les tweets positifs comme ayant une positivité inférieure à -0.2
@@ -27,7 +27,7 @@ def positivite():
         tweet=TextBlob(tweet)
         if tweet.sentiment.polarity>0.2:
             tweets_positif_1.append(tweet)
-        if -0.2<tweet.sentiment.polarity<0.2:
+        if -0.2<=tweet.sentiment.polarity<=0.2:
             tweets_neutre_1.append(tweet)
         else:
             tweets_negatif_1.append(tweet)
