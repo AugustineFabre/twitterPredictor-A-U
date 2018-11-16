@@ -51,7 +51,7 @@ def positivite():
             tweets_negatif_1.append(tweet)
     return tweets_positif_0,tweets_negatif_0,tweets_neutre_0,tweets_positif_1,tweets_negatif_1,tweets_neutre_1
 
-tweets_positif_0,tweets_negatif_0,tweets_neutre_0,tweets_positif_1,tweets_negatif_1,tweets_neutre_1=positivite(tweets)
+tweets_positif_0,tweets_negatif_0,tweets_neutre_0,tweets_positif_1,tweets_negatif_1,tweets_neutre_1=positivite()
 
 print("Percentage of positive tweets: {}%".format(len(tweets_positif_0)*100/len(data_pd_0['tweet_textual_content'])))
 print("Percentage of neutral tweets: {}%".format(len(tweets_neutre_0)*100/len(data_pd_0['tweet_textual_content'])))
