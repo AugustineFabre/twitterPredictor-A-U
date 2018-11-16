@@ -20,7 +20,7 @@ def recup_mot():
         for i in range(len(right)):
             if right[i] in L:
                 right.pop(i)
-        print right
+        print (right)
 #on défini les tweets positifs de Emmanuel Macron et Marine Le Pen
 data_pd_0,data_pd_1=myfonc()
 
